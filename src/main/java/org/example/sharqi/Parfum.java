@@ -50,11 +50,11 @@ public class Parfum extends Fragrance {
     @SerializedName("Main Accords")
     public List<String> mainAccords;
 
-    //overlaoding ures konstruktor
+    //ures konstruktor
     public Parfum() {
     }
 
-    // overloading parameteres
+    //parameteres konstruktor
     public Parfum(String name, String brand, String price) {
         this.name = name;
         this.brand = brand;

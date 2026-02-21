@@ -1,6 +1,8 @@
 package org.example.sharqi;
 import java.util.List;
 
+//statikus atributum
+//statikus metodus
 public class FragranceManager {
 
     public static final String APP_VERSION = "1.0.0";

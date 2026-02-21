@@ -689,7 +689,7 @@ public class ParfumController {
                     Type parfumListType = new TypeToken<ArrayList<Parfum>>(){}.getType();
                     List<Parfum> results = gson.fromJson(response.body(), parfumListType);
 
-                    // 16. pont: Saját kivétel dobása
+                    // sajat kivatel throw
                     if (results == null || results.isEmpty()) {
                         throw new InvalidFragranceException("Nem található parfüm ezzel a névvel: " + searchTerm);
                     }
@@ -1437,6 +1437,11 @@ public class ParfumController {
                         "https://media.parfumo.com/perfumes/bb/bb736c-by-the-fireplace-maison-margiela_1200.jpg?width=720&aspect_ratio=1:1"
                 }
 
+                /**
+                 * ezt databasebol kell kiovasni, es ez valtoo lehet, az API bekoti a DB-be es az irassa ki a klonokat;
+                 * SQLite hasznalva;
+                */
+
 
         };
         TilePane gridContainer = new TilePane();
@@ -1526,3 +1531,8 @@ public class ParfumController {
         return row;
     }
 }
+
+
+/**
+ * Ezt az eegsz kodot jobban kellene rendezni, atlathatobb legyen
+ */
